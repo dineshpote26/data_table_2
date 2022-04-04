@@ -28,12 +28,14 @@ class DataColumn2 extends DataColumn {
       String? tooltip,
       bool numeric = false,
       Function(int, bool)? onSort,
-      this.size = ColumnSize.M})
+      this.size = ColumnSize.M,
+      this.fixedWidth,})
       : super(label: label, tooltip: tooltip, numeric: numeric, onSort: onSort);
 
   /// Column sizes are determined based on available width by distributing it
   /// to individual columns accounting for their relative sizes (see [ColumnSize])
   final ColumnSize size;
+  final double? fixedWidth;
 }
 
 /// Extension of standard [DataRow], adds row level tap events. Also there're
@@ -577,6 +579,8 @@ class DataTable2 extends DataTable {
             w *= smRatio;
           } else if (column.size == ColumnSize.L) {
             w *= lmRatio;
+          }else if(column.fixedWidth != null){
+            w = column.fixedWidth!;
           }
         }
         totalWidth += w;
