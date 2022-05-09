@@ -399,14 +399,12 @@ class DataTable2 extends DataTable {
         overlayColor: overlayColor,
         child: label,
       );
-    } else {
+    } else if(onRowTap != null || onSelectChanged != null){
       label = GestureDetector(
         child: TableRowInkWell(
           child: label,
           overlayColor: overlayColor,
-          onTap: onRowTap == null
-              ? onSelectChanged
-              : () {
+          onTap: () {
                   onRowTap();
                   onSelectChanged();
                 },
