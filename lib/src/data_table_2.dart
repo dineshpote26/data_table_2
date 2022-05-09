@@ -405,8 +405,8 @@ class DataTable2 extends DataTable {
           child: label,
           overlayColor: overlayColor,
           onTap: () {
-                  onRowTap();
-                  onSelectChanged();
+                  onRowTap?.call();
+            onSelectChanged?.call();
                 },
           onDoubleTap: onRowDoubleTap,
           onLongPress: onRowLongPress,
