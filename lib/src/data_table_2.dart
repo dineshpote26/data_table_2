@@ -400,7 +400,7 @@ class DataTable2 extends DataTable {
         child: label,
       );
     } else if(onRowTap != null || onSelectChanged != null){
-      label = GestureDetector(
+      label = /*GestureDetector(
         child: TableRowInkWell(
           child: label,
           overlayColor: overlayColor,
@@ -413,6 +413,9 @@ class DataTable2 extends DataTable {
         ),
         onSecondaryTap: onRowSecondaryTap,
         onSecondaryTapDown: onRowSecondaryTapDown,
+      )*/
+        Container(
+        child: label,
       );
     }
     return label;
