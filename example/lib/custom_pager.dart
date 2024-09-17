@@ -73,7 +73,7 @@ class _CustomPagerState extends State<CustomPager> {
       child: Theme(
           data: Theme.of(context).copyWith(
               iconTheme: IconThemeData(color: Colors.white),
-              textTheme: TextTheme(subtitle1: TextStyle(color: Colors.white))),
+              textTheme: TextTheme(titleMedium: TextStyle(color: Colors.white))),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

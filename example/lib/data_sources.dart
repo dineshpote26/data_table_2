@@ -167,7 +167,7 @@ class DessertDataSource extends DataTableSource {
       onSecondaryTap: hasRowTaps
           ? () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 duration: Duration(seconds: 1),
-                backgroundColor: Theme.of(context).errorColor,
+                backgroundColor: Theme.of(context).colorScheme.error,
                 content: Text('Right clicked on ${dessert.name}'),
               ))
           : null,

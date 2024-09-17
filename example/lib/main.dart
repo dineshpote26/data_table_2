@@ -38,7 +38,7 @@ Scaffold _getScaffold(BuildContext context, Widget body,
               dropdownColor: Colors.grey[800],
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1!
+                  .titleMedium!
                   .copyWith(color: Colors.white),
               value: _getCurrentRoute(context),
               onChanged: (v) {
@@ -89,7 +89,7 @@ Scaffold _getScaffold(BuildContext context, Widget body,
                     dropdownColor: Colors.grey[300],
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle1!
+                        .titleMedium!
                         .copyWith(color: Colors.black),
                     value: defaultOption,
                     onChanged: (v) {
